@@ -1,6 +1,9 @@
 apply plugin: "com.android.application"
 apply plugin: "com.google.gms.google-services"
 
+implementation 'com.google.firebase:firebase-core:16.0.1'
+implementation 'com.google.firebase:firebase-messaging:17.0.0'
+
 import com.android.build.OutputFile
 
 /**
