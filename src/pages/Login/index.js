@@ -6,10 +6,12 @@ import {
   TextInput, 
 } from 'react-native'
 
+import { styles } from './styles'
+
 export function Login(){
   return(
-    <View>
-      <Text> Login </Text>
+    <View style={styles.container}>
+      <Text style={{color: 'white' }} > Login </Text>
     </View>
   )
 }
