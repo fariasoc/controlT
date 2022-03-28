@@ -5,10 +5,12 @@ import {
   Button,
   TextInput,
   Image,
-  TouchableOpacity
+  TouchableOpacity, 
+  Alert
 } from 'react-native'
 
 import { Feather } from '@expo/vector-icons'
+import auth from '@react-native-firebase/auth'
 
 import { colors, fonts } from '../../styles'
 
@@ -19,7 +21,33 @@ export function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [passwordIsVisible, setPasswordIsVisible] = useState(false)
+  const [ loading, setLoading] = useState(false)
 
+  function logon(){
+    if(email === '' || password === ''){
+      Alert.alert('Algo deu errado', 'Preencha todos os campos primeiro!')
+      return; 
+    }
+
+    auth().createUserWithEmailAndPassword(email, password)
+    .catch(error => (
+      Alert.alert(error.code, error.message)
+    ))
+
+  }
+
+  function login(){
+    if(email === '' || password === ''){
+      Alert.alert('Algo deu errado', 'Preencha todos os campos primeiro!')
+      return; 
+    }
+
+    auth().signInWithEmailAndPassword(email, password)
+    .catch(error => {
+      console.log(error)
+    })
+
+  } 
 
   return (
     <View style={styles.container}>
@@ -60,10 +88,15 @@ export function Login() {
       <TouchableOpacity>
         <Text style={styles.TextResetPassword} > Esqueceu a senha? </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.containerButtonLogin} > 
+      <TouchableOpacity 
+        style={styles.containerButtonLogin} 
+        onPress={login}
+      > 
         <Text style={styles.textButtonLogin}> ENTRAR </Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity 
+        onPress={logon}
+      >
         <Text style={styles.TextResetPassword} > Criar uma conta </Text>
       </TouchableOpacity>
     </View>
