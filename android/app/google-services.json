@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "507044234122",
-    "project_id": "onpenclose",
-    "storage_bucket": "onpenclose.appspot.com"
+    "project_number": "20010892835",
+    "project_id": "control-37f63",
+    "storage_bucket": "control-37f63.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:507044234122:android:8838a431cffd3477b5be73",
+        "mobilesdk_app_id": "1:20010892835:android:27ee84888a95c02289fb96",
         "android_client_info": {
           "package_name": "com.controlt"
         }
       },
       "oauth_client": [
         {
-          "client_id": "507044234122-ebop3d9q61rr2qvqo8qkudfhe74coe4a.apps.googleusercontent.com",
+          "client_id": "20010892835-1j93k2auvfb1qo7tomtmnq8svpqqvcl5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDe11ZZdfn4l9Vy8tahGkir-SjuFedrInQ"
+          "current_key": "AIzaSyAqVsxEQ5oSl3oeLKnjv2m0hGf2gKbWnmk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "507044234122-ebop3d9q61rr2qvqo8qkudfhe74coe4a.apps.googleusercontent.com",
+              "client_id": "20010892835-1j93k2auvfb1qo7tomtmnq8svpqqvcl5.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
